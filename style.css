@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, blue, orange);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+}
+
+.center {
+    width: 27rem;
+    background: gainsboro;
+    border-radius: 8%;
+    padding: 0% 0.8%;
+    padding-top: 0%;
+}
+
+.center .round {
+    width: 130px;
+    height: 130px;
+    background: brown;
+    border-radius: 50%;
+    display: flex;
+    margin-top: -13%;
+    margin-bottom: 5%;
+    overflow: hidden;
+}
+
+.show-left {
+    transform: translateX(-60%);
+}
+
+.show-left-anim {
+    transform: translateX(0%);
+    animation: animate-hand 1s linear 1;
+}
+
+@keyframes animate-hand {
+    0% {
+        transform: rotateZ(-135deg);
+    }
+    50% {
+        transform: rotateZ(-90deg);
+    }
+    75% {
+        transform: rotateZ(-45deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.show-right {
+    transform: translateX(60%);
+}
+
+.show-right-anim {
+    transform: translateX(0%);
+    animation: animate-hand 1s linear 1;
+}
+
+input {
+    background-color: rgb(192, 188, 188);
+}
+
+input:focus {
+    background-color: gray;
+}
+
+.center form #email-input {
+    width: 100%;
+    height: 1.8rem;
+    font-size: large;
+    padding: 1em;
+}
+
+.center form #password-input {
+    width: 100%;
+    height: 1.8rem;
+    font-size: large;
+    padding: 1em;
+}
+
+.center form .submit-btn {
+    margin: 4% 0%;
+    border-radius: 30%;
+    height: 2rem;
+    padding: 0% 5%;
+    width: 8rem;
+    font-weight: bold;
+}
+
+.center form .submit-btn:hover {
+    background-color: gray;
+}
