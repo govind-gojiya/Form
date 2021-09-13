@@ -23,8 +23,13 @@ pwdbox.addEventListener('focusout', () => {
 
 emailbox.addEventListener('keyup', (e) => {
     let len = emailbox.value.length;
-    i = (len >= 37 ? 37 : len);
-    i = i / 3 - 2;
-    eyeLeft.style.transform = `translateX(${i}%)`;
-    eyeRight.style.transform = `translateX(${i}%)`;
+    if (len > 30) {
+        alert("Email Character not more then it. Enter Valid Email plaese.");
+        emailbox.value = " ";
+    } else {
+        i = (len >= 30 ? 30 : len);
+        i = i / 3 - 2;
+        eyeLeft.style.transform = `translateX(${i}%)`;
+        eyeRight.style.transform = `translateX(${i}%)`;
+    }
 })
