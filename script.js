@@ -23,7 +23,7 @@ pwdbox.addEventListener('focusout', () => {
 
 emailbox.addEventListener('keyup', (e) => {
     let len = emailbox.value.length;
-    i = len;
+    i = (len >= 37 ? 37 : len);
     i = i / 3 - 2;
     eyeLeft.style.transform = `translateX(${i}%)`;
     eyeRight.style.transform = `translateX(${i}%)`;
